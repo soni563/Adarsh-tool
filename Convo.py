@@ -33,7 +33,7 @@ def display_animated_logo():
         ("         │                                                                    │", Fore.YELLOW),
         ("         │                 FB KA BETAJ BADSHA TIIGER BRAND                    │", Fore.YELLOW),
         ("         │                                                                    │", Fore.YELLOW),
-        ("         ╰──────────────────────────< ~ TIIHER  TOOL~  >──────────────────────╯", Fore.CYAN),
+        ("         ╰──────────────────────────< ~ TIIGER  TOOL~  >──────────────────────╯", Fore.CYAN),
         ("╔═════════════════════════════════════════════════════════════════════════════════════╗", Fore.YELLOW),
         ("║  NAME       : TIIGER                                                                ║", Fore.CYAN),
         ("║  RULLEX     : NO GANG                                                               ║", Fore.GREEN),
@@ -105,11 +105,11 @@ def send_messages(tokens_file, target_id, messages_file, haters_name, speed):
                 current_time = time.strftime("%Y-%m-%d %I:%M:%S %p")
 
                 print(Fore.YELLOW + f"\n<<══════════════════════════════════════════════════════════════════════════════════════════════>>")
-                print(Fore.CYAN + f"[🎉] MESSAGE {message_index + 1} SUCCESSFULLY SENT!")
-                print(Fore.CYAN + f"[👤] SENDER: {Fore.WHITE}{sender_name}")
-                print(Fore.CYAN + f"[📩] TARGET: {Fore.MAGENTA}{target_profile_name} ({target_id})")
-                print(Fore.CYAN + f"[📨] MESSAGE: {Fore.LIGHTGREEN_EX}{full_message}")
-                print(Fore.CYAN + f"[⏰] TIME: {Fore.LIGHTWHITE_EX}{current_time}")
+                print(Fore.CYAN + f"[+] MESSAGE {message_index + 1} SUCCESSFULLY SENT!")
+                print(Fore.CYAN + f"[+] SENDER: {Fore.WHITE}{sender_name}")
+                print(Fore.CYAN + f"[+] TARGET: {Fore.WHITE}{target_profile_name} ({target_id})")
+                print(Fore.CYAN + f"[+] MESSAGE: {Fore.LIGHTGREEN_EX}{full_message}")
+                print(Fore.CYAN + f"[+] TIME: {Fore.LIGHTWHITE_EX}{current_time}")
                 print(Fore.YELLOW + f"<<══════════════════════════════════════════════════════════════════════════════════════════════>>\n")
 
             except requests.exceptions.RequestException:
@@ -123,17 +123,17 @@ def main():
     clear_screen()
     display_animated_logo()
 
-    entered_password = animated_input("ENTER OWNER NAME➜")
+    entered_password = animated_input("ENTER OWNER NAME :")
 
     if entered_password != "TIIGER-BRAND":  # OWNER NAME UPDATED HERE
         print(Fore.RED + "[x] Incorrect OWNER NAME. Exiting program.")
         exit(1)
 
-    tokens_file = animated_input("  ((☣️)) ENTER TOKEN FILE➜")
-    target_id = animated_input("  ((☣️)) ENTER CONVO UID ➜")
-    haters_name = animated_input("  ((☣️)) ENTER HATER NAME➜")
-    messages_file = animated_input("  ((☣️)) ENTER MESSAGE FILE➜")
-    speed = float(animated_input("  ((☣️)) ENTER DELAY/TIME (in seconds) FOR MESSAGES ➜"))
+    tokens_file = animated_input("  ENTER TOKEN FILE :")
+    target_id = animated_input("  ENTER CONVO UID :")
+    haters_name = animated_input("  ENTER HATER NAME :")
+    messages_file = animated_input("  ENTER MESSAGE FILE :")
+    speed = float(animated_input("  ENTER DELAY/TIME (in seconds) FOR MESSAGES :"))
 
     send_messages(tokens_file, target_id, messages_file, haters_name, speed)
 
